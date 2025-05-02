@@ -26,7 +26,6 @@ Future<void> main() async {
   final jsonSource = jsonEncode(yaml);
   final json = jsonDecode(jsonSource);
   final config = SpansConfig.fromJson(json as Map<String, dynamic>);
-  var bytesWritten = 0;
   for (final MapEntry(key: inputDirectoryName, value: outputFilename)
       in config.spans.entries) {
     final inputDirectory = Directory(inputDirectoryName);
@@ -57,6 +56,7 @@ Future<void> main() async {
       final sounds = [
         "import 'package:flutter_audio_games/flutter_audio_games.dart';\n",
       ];
+      var bytesWritten = 0;
       for (final file in inputDirectory.listSync().whereType<File>()) {
         final basename = path.basename(file.path);
         if (config.supportedSoundFileExtensions.contains(
