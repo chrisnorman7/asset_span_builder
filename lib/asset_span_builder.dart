@@ -1,1 +1,1 @@
-export 'src/json/sounds_config.dart';
+export 'src/json/spans_config.dart';

@@ -1,15 +1,15 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'sounds_config.dart';
+part of 'spans_config.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SoundsConfig _$SoundsConfigFromJson(Map<String, dynamic> json) => SoundsConfig(
+SpansConfig _$SpansConfigFromJson(Map<String, dynamic> json) => SpansConfig(
   dataDirectory: json['dataDirectory'] as String? ?? 'assets',
-  sounds:
-      (json['sounds'] as Map<String, dynamic>?)?.map(
+  spans:
+      (json['spans'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
       ) ??
       const {'sounds': 'lib/src/sounds.dart'},
@@ -21,10 +21,10 @@ SoundsConfig _$SoundsConfigFromJson(Map<String, dynamic> json) => SoundsConfig(
       const ['.mp3', '.wav'],
 );
 
-Map<String, dynamic> _$SoundsConfigToJson(SoundsConfig instance) =>
+Map<String, dynamic> _$SpansConfigToJson(SpansConfig instance) =>
     <String, dynamic>{
       'dataDirectory': instance.dataDirectory,
-      'sounds': instance.sounds,
+      'spans': instance.spans,
       'dataFileExtension': instance.dataFileExtension,
       'supportedSoundFileExtensions': instance.supportedSoundFileExtensions,
     };

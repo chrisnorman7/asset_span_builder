@@ -10,10 +10,10 @@ import 'package:yaml_edit/yaml_edit.dart';
 
 /// Build a data file.
 Future<void> main() async {
-  const filename = 'sounds.yaml';
+  const filename = 'spans.yaml';
   final file = File(filename);
   if (!file.existsSync()) {
-    const config = SoundsConfig();
+    const config = SpansConfig();
     final yaml = YamlEditor('')..update([], config.toJson());
     file.writeAsStringSync(yaml.toString());
     return print('Created empty configuration file at $filename.');
@@ -25,10 +25,10 @@ Future<void> main() async {
   }
   final jsonSource = jsonEncode(yaml);
   final json = jsonDecode(jsonSource);
-  final config = SoundsConfig.fromJson(json as Map<String, dynamic>);
+  final config = SpansConfig.fromJson(json as Map<String, dynamic>);
   var bytesWritten = 0;
   for (final MapEntry(key: inputDirectoryName, value: outputFilename)
-      in config.sounds.entries) {
+      in config.spans.entries) {
     final inputDirectory = Directory(inputDirectoryName);
     if (inputDirectory.existsSync()) {
       print('Directory: $inputDirectoryName');
