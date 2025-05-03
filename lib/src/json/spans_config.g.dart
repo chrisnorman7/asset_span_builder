@@ -8,8 +8,8 @@ part of 'spans_config.dart';
 
 SpansConfig _$SpansConfigFromJson(Map<String, dynamic> json) => SpansConfig(
   dataDirectory: json['dataDirectory'] as String? ?? 'assets',
-  spans:
-      (json['spans'] as Map<String, dynamic>?)?.map(
+  directories:
+      (json['directories'] as Map<String, dynamic>?)?.map(
         (k, e) => MapEntry(k, e as String),
       ) ??
       const {'sounds': 'lib/src/sounds.dart'},
@@ -24,7 +24,7 @@ SpansConfig _$SpansConfigFromJson(Map<String, dynamic> json) => SpansConfig(
 Map<String, dynamic> _$SpansConfigToJson(SpansConfig instance) =>
     <String, dynamic>{
       'dataDirectory': instance.dataDirectory,
-      'spans': instance.spans,
+      'directories': instance.directories,
       'dataFileExtension': instance.dataFileExtension,
       'supportedSoundFileExtensions': instance.supportedSoundFileExtensions,
     };

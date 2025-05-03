@@ -1,11 +1,12 @@
 name: asset_span_builder
-version: 0.0.2
+version: 0.1.0
 description: A script for building asset spans from input files.
 repository: https://github.com/chrisnorman7/asset_span_builder
 environment:
   sdk: ^3.7.2
 
 dependencies:
+  filesize: ^2.0.1
   json_annotation: ^4.9.0
   path: ^1.8.0
   recase: ^4.1.0
