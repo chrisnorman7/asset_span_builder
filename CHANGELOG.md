@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0
+
+- First stable release.
+- Downgrade `lints` package.
+
 ## 0.3.0
 
 - Bumped the version number.
