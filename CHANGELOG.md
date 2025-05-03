@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0
+
+- Bumped the version number.
+
 ## 0.1.1
 
 - Support publishing from workflow.
