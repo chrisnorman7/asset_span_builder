@@ -14,8 +14,8 @@ SpansConfig _$SpansConfigFromJson(Map<String, dynamic> json) => SpansConfig(
       ) ??
       const {'sounds': 'lib/src/sounds.dart'},
   dataFileExtension: json['dataFileExtension'] as String? ?? '.dat',
-  supportedSoundFileExtensions:
-      (json['supportedSoundFileExtensions'] as List<dynamic>?)
+  supportedFileExtensions:
+      (json['supportedFileExtensions'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList() ??
       const ['.mp3', '.wav'],
@@ -26,5 +26,5 @@ Map<String, dynamic> _$SpansConfigToJson(SpansConfig instance) =>
       'dataDirectory': instance.dataDirectory,
       'directories': instance.directories,
       'dataFileExtension': instance.dataFileExtension,
-      'supportedSoundFileExtensions': instance.supportedSoundFileExtensions,
+      'supportedFileExtensions': instance.supportedFileExtensions,
     };
