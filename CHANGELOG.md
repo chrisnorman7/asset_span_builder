@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Support publishing from workflow.
+
 ## 0.1.0
 
 - Generate abstract classes rather than using constants.

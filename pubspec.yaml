@@ -1,5 +1,5 @@
 name: asset_span_builder
-version: 0.1.0
+version: 0.1.1
 description: A script for building asset spans from input files.
 repository: https://github.com/chrisnorman7/asset_span_builder
 environment:
